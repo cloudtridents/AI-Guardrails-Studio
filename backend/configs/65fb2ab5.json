@@ -1,0 +1,8 @@
+{
+  "id": "65fb2ab5",
+  "name": "Factuality Check",
+  "description": "Validates that bot responses don't contain hallucinated claims or unverifiable statements.",
+  "colang_content": "define bot hedges uncertainty\n  \"Based on my knowledge, [response]. However, I'd recommend verifying this with an official source.\"\n\ndefine flow uncertainty\n  user ask factual question\n  bot hedges uncertainty\n",
+  "yaml_content": "models:\n  - type: main\n    engine: openai\n    model: gpt-5.4-nano\n\ninstructions:\n  - type: general\n    content: |\n      The bot should only make claims it can support.\n      When uncertain, it should hedge with phrases like \"Based on my knowledge\" or \"I believe\".\n      It should never present uncertain information as definitive fact.\n\nrails:\n  output:\n    flows:\n      - self check output\n\nprompts:\n  - task: self_check_output\n    content: |\n      Check if the bot response makes any definitive factual claims that could be\n      hallucinated or unverifiable. Claims should be hedged with uncertainty markers.\n      \n      Bot response: \"{{ bot_response }}\"\n      \n      Question: Does this response make unhedged factual claims that should be blocked (Yes or No)?\n      Answer:\n",
+  "prompts_content": ""
+}

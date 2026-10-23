@@ -1,0 +1,25 @@
+{
+  "id": "agent01",
+  "name": "Customer Support Agent",
+  "description": "A helpful customer support agent that answers questions about products and services.",
+  "system_prompt": "You are a friendly and professional customer support agent. Help users with their questions about products, orders, and services. Be concise and accurate. Never share internal company information or make promises you can't keep.",
+  "provider": "openai",
+  "model": "gpt-5.4-nano",
+  "api_base": null,
+  "api_version": null,
+  "deployment_name": null,
+  "temperature": 0.5,
+  "tools": [
+    "search_web",
+    "get_current_time"
+  ],
+  "input_guardrail_ids": [
+    "d10afc7b",
+    "d5c61f80",
+    "fae6d4ed"
+  ],
+  "output_guardrail_ids": [],
+  "input_guardrail_id": "safety01",
+  "output_guardrail_id": null,
+  "enabled": true
+}

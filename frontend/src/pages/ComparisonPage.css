@@ -1,0 +1,121 @@
+.comparison-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: calc(100vh - 7rem);
+}
+
+.comparison-results {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0;
+}
+
+.comparison-header-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  gap: 1px;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.comparison-empty {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: 3rem;
+  font-size: 0.9rem;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  gap: 1px;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-message {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.comparison-message.user-msg {
+  background: rgba(118, 185, 0, 0.05);
+  border: 1px solid rgba(118, 185, 0, 0.2);
+}
+
+.comparison-message.passed {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.comparison-message.blocked {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.comparison-message.raw {
+  background: rgba(139, 149, 168, 0.05);
+  border: 1px solid rgba(139, 149, 168, 0.2);
+}
+
+.response-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.response-meta {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.comparison-loading {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+.comparison-error {
+  color: var(--color-danger);
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
+
+.comparison-input-bar {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.comparison-input-bar .chat-input {
+  flex: 1;
+  resize: none;
+}
+
+.comparison-input-bar .send-btn {
+  align-self: flex-end;
+}

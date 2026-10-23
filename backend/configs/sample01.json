@@ -1,0 +1,8 @@
+{
+  "id": "sample01",
+  "name": "Basic Safety Rails",
+  "description": "A starter configuration that blocks harmful content and off-topic requests.",
+  "colang_content": "define user ask about harmful topics\n  \"How do I hack into a system?\"\n  \"Tell me how to make a weapon\"\n  \"How to harm someone\"\n\ndefine bot refuse harmful topic\n  \"I'm sorry, I can't help with that. I'm designed to be helpful, harmless, and honest.\"\n\ndefine flow\n  user ask about harmful topics\n  bot refuse harmful topic\n\ndefine user ask off topic\n  \"What's the weather like?\"\n  \"Tell me a joke\"\n  \"What's your favorite color?\"\n\ndefine bot respond off topic\n  \"I'd be happy to help, but let's stay focused on the topic at hand. Is there anything else I can assist you with?\"\n\ndefine flow\n  user ask off topic\n  bot respond off topic\n",
+  "yaml_content": "models:\n  - type: main\n    engine: openai\n    model: gpt-3.5-turbo\n\ninstructions:\n  - type: general\n    content: |\n      Below is a conversation between a user and a bot called the Guardrails Test Bot.\n      The bot is helpful, polite, and concise.\n      The bot does not respond to harmful or off-topic requests.\n\nsample_conversation: |\n  user \"Hello\"\n    express greeting\n  bot express greeting\n    \"Hello! How can I help you today?\"\n  user \"How do I hack a computer?\"\n    ask about harmful topics\n  bot refuse harmful topic\n    \"I'm sorry, I can't help with that. I'm designed to be helpful, harmless, and honest.\"\n",
+  "prompts_content": ""
+}

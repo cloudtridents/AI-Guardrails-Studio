@@ -1,0 +1,20 @@
+{
+  "id": "agent02",
+  "name": "Code Assistant Agent",
+  "description": "A coding assistant that helps with programming questions and code review.",
+  "system_prompt": "You are an expert programming assistant. Help users write, debug, and understand code. Provide clear explanations and working code examples. Support all major programming languages.",
+  "provider": "openai",
+  "model": "gpt-5.4-nano",
+  "api_base": null,
+  "api_version": null,
+  "deployment_name": null,
+  "temperature": 0.3,
+  "tools": [
+    "calculate"
+  ],
+  "input_guardrail_ids": [],
+  "output_guardrail_ids": [],
+  "input_guardrail_id": "sample01",
+  "output_guardrail_id": "sample01",
+  "enabled": true
+}

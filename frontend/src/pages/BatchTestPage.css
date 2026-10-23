@@ -1,0 +1,135 @@
+.batch-test-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.batch-config {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.batch-config textarea {
+  font-family: "SF Mono", monospace;
+  font-size: 0.85rem;
+  resize: vertical;
+  min-height: 150px;
+}
+
+.batch-report {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.batch-report h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.report-summary {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+.summary-stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.summary-stat.passed {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.summary-stat.blocked {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.summary-stat.passed .stat-value { color: var(--color-success); }
+.summary-stat.blocked .stat-value { color: var(--color-danger); }
+
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.results-table {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 80px 1fr 70px;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  align-items: center;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-row.header {
+  background: var(--color-bg);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.result-row.blocked {
+  background: rgba(239, 68, 68, 0.03);
+}
+
+.result-index {
+  color: var(--color-text-secondary);
+}
+
+.result-input {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.result-status {
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.result-status.blocked { color: var(--color-danger); }
+.result-status.passed { color: var(--color-success); }
+
+.result-rails {
+  font-family: "SF Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--color-warning);
+}
+
+.result-latency {
+  text-align: right;
+  font-family: "SF Mono", monospace;
+  color: var(--color-text-secondary);
+}

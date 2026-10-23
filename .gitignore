@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.env
+
+# Node
+node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime data
+backend/classifier_categories.json
+*.pid
+
+# Logs
+logs/
+
+# Model cache (multi-GB Hugging Face weights — never commit)
+.hf_cache/
+
+# Generated runtime state
+backend/audit/*.jsonl
+backend/sessions/*.json
+backend/metrics/*.jsonl
+backend/redteam_runs/*.json
+backend/versions/*.json
+
+# Build artifacts
+backend/backend.zip
