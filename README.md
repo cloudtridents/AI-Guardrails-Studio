@@ -1,4 +1,4 @@
-# NeMo Guardrails Interactive Testing UI
+# Agentic AI Guardrails Interactive Studio
 
 An interactive web application for configuring, managing, and testing NVIDIA NeMo Guardrails before applying them to AI agents.
 
